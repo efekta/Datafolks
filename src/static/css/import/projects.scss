@@ -1,0 +1,118 @@
+.projects {
+  padding: 60px 0;
+  @media(max-width: 1024px) {
+    padding: 30px 0;
+  }
+}
+.projects__title {
+  font-size: 45px;
+  font-weight: 400;
+  color: #344258;
+  text-align: center;
+  margin-bottom: 50px;
+  @media(max-width: 1024px) {
+    font-size: 36px;
+    margin-bottom: 35px;
+  }
+  @media(max-width: 768px) {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+}
+
+.projects__desc {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.projects__list {
+  padding: 100px 0 70px 0;
+  @media(max-width: 1024px) {
+    padding: 30px 0;
+  }
+}
+
+.work-list {
+  display: flex;
+  justify-content: center;
+  @media(max-width: 768px) {
+    flex-wrap: wrap;
+  }
+  &__item {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    @media(max-width: 768px) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(205,205,205,0));
+      }
+  }
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  &__btn {
+    min-width: 70%;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    &:hover {
+      background: #fff;
+      color: #08172d;
+    }
+  }
+  &__btn-wrapp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .6);
+    opacity: 0;
+    transition: all .3s ease-in-out;
+  }
+}
+.work-list__item:hover {
+  .work-list__btn-wrapp {
+    opacity: 1;
+  }
+  .work-list__btn {
+    opacity: 1;
+  }
+  .work-list__title {
+    opacity: 0;
+  }
+}
+@media(max-width: 1024px) {
+  .work-list__btn-wrapp {
+    opacity: 1;
+  }
+  .work-list__btn {
+    opacity: 1;
+  }
+  .work-list__title {
+    opacity: 0;
+  }
+}

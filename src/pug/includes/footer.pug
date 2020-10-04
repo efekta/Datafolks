@@ -1,9 +1,40 @@
-.footer
+footer.page-footer
+    .container
+        .row
+            .page-footer__contacts.contacts.col-md-6
+                h2.page-footer__title.contacts__title Контакты
+                p.page-footer__desc.contacts__desc Коммуникационное агентство
+                p.page-footer__adress.contacts__adress 344000, Россия, г. Ростов-на-Дону ул. Мира, д. 12 Бизнес–центр «Рост», оф. 104
+                .contacts__wrapp.footer-contacts
+                    ul.footer-contacts__phone.contacts-phone
+                        li.contacts-phone__item
+                            a.contacts-phone__link(href="tel:+78613001128") +7 (861) 300 11 28
+                        li.contacts-phone__item
+                            a.contacts-phone__link(href="tel:+78613001152") +7 (861) 300 11 52
+                        li.contacts-phone__item
+                            a.contacts-phone__link(href="tel:+78613001152") +7 (861) 300 11 52
+                    ul.footer-contacts__email.contacts-email
+                        li.contacts-email__item
+                            p.contacts-email__title Email:
+                            a.contacts-email__link(href="mailto:info@example.com") info@example.com
+                        li.contacts-email__item
+                            a.contacts-email__link(href="Facebook.com/exampleagency") Facebook.com/exampleagency
+            form.page-footer__form.footer-form.col-md-6(action="" method="POST" autocomplete="off")
+                input.footer-form__input(placeholder="Полное имя" name="name")
+                input.footer-form__input(placeholder="Email" name="email")
+                input.footer-form__input(placeholder="Телефон" name="phone")
+                textarea.footer-form__textarea(placeholder="Пожалуйста, опишите задачу" name="description_task")
+                a.footer-form__policy-link(href="#" target="_blank") Политика обработки персональных данных
+                button.page-btn.footer-form__btn(type="submit") Отправить заявку
 
 
 
-include ./modals.pug
+
+
+
+
 script(src="libs/jquery/jquery-3.4.1.min.js")
 script(src="libs/bootstrap/dist/js/bootstrap.min.js")
 script(src="libs/maskedinput/jquery.maskedinput.min.js")
+script(src="libs/fontawesome/svg-with-js/js/fontawesome-all.min.js")
 script(src="js/common.js")
